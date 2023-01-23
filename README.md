@@ -1,202 +1,282 @@
-# Application
+# Columbia Fintech Bootcamp: Module #21 Challenge
 
-## Challenge: Martian Token Crowdsale
+---
 
-You will create a fungible token that is ERC-20 compliant and that will be minted by using a `Crowdsale` contract from the OpenZeppelin Solidity library.
+Feature Summary: Martian Token Crowdsale
 
-The crowdsale contract that you create will manage the entire crowdsale process, allowing users to send ether to the contract and in return receive KAI, or KaseiCoin tokens. Your contract will mint the tokens automatically and distribute them to buyers in one transaction.
+Created a fungible token that is ERC-20 compliant that is minted by using a `Crowdsale` contract from the OpenZeppelin Solidity library.  This crowdsale contract manages the entire crowdsale process, allowing users to send ether to the contract and in return receive KAI, or KaseiCoin tokens. The contract will mint the tokens automatically and distribute them to buyers in one transaction.
 
-### Instructions
+- Includes the following tasks:
 
-The steps for this Challenge are divided into the following sections:
+    - Creation of the KaseiCoin Token Contract
+    - Creation of the KaseiCoin Crowdsale Contract
+    - Creation of the KaseiCoin Deployer Contract
+    - Deploying of the Crowdsale contract to a Local Blockchain
+    - Optional: Extend the Crowdsale Contract by Using OpenZeppelin
 
-1. Create the KaseiCoin Token Contract
+---
 
-2. Create the KaseiCoin Crowdsale Contract
+## Technologies
 
-3. Create the KaseiCoin Deployer Contract
+This projects leverages the Remix IDE which is an open source application for developing, deploying, and administering smart contracts that run in Ethereum-based blockchains. 
+</br></br>
+- [Anaconda](https://docs.anaconda.com/anaconda/install/) - an open-source distribution of the Python
+- [Remix IDE](https://remix.ethereum.org/) The Native IDE for Web3 Development.
+- [Ganache](https://trufflesuite.com/ganache/) - personal Ethereum blockchain which you can use to run tests
+- [MetaMask](https://metamask.io/) - A crypto wallet & gateway to blockchain apps
 
-4. Deploy the Crowdsale to a Local Blockchain
+---
 
-5. Optional: Extend the Crowdsale Contract by Using OpenZeppelin
+## Evaluation Evidence
 
-#### Create the KaseiCoin Token Contract
+<hr style="border:2px solid blue">
 
-In this section, you will create a smart contract that defines KaseiCoin as an ERC-20 token. To do so, complete the following steps:
+### Compile the KaseiCoin Contract
+![](Evaluation_Evidence/Step1.8_CompileKaseiCoinContract.JPG)<br/>
 
-1. Import the provided `KaseiCoin.sol` starter file into the Remix IDE.
+<hr style="border:2px solid blue">
 
-2. Import the following contracts from the OpenZeppelin library:
+### Compile the KaseiCoinCrowdsale Contract
+![](Evaluation_Evidence/Step2.6_CompileKaseiCoinCrowdsaleContract.JPG)<br/>
 
-    * `ERC20`
+<hr style="border:2px solid blue">
 
-    * `ERC20Detailed`
+### Compile the KaseiCoinCrowdsaleDeployer Contract
+![](Evaluation_Evidence/Step3.12_CompileKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
-    * `ERC20Mintable`
+<hr style="border:2px solid blue">
 
-3. Define a contract for the KaseiCoin token called `KaseiCoin`, and have the contract inherit the three contracts that you just imported from OpenZeppelin.
+### Deploy the KaseiCoinCrowdsaleDeployer Contract (Remix deploy view)
+![](Evaluation_Evidence/Step4.1.a_DeployKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
-4. Inside of your `KaseiCoin` contract, add a constructor with the following parameters: `name`, `symbol`, and `initial_supply`.
+<hr style="border:2px solid blue">
 
-5. Then, as part of your constructor definition, add a call to the `ERC20Detailed` contract’s constructor, passing the parameters `name`, `symbol`, and `18`. Recall that 18 is the value for the `decimal` parameter.
+### Deploy the KaseiCoinCrowdsaleDeployer Contract (Remix contract details view)
+![](Evaluation_Evidence/Step4.1.b_DeployKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
+<hr style="border:2px solid blue">
 
-6. Compile the contract using compiler version 0.5.0.
+### Deploy the KaseiCoinCrowdsaleDeployer Contract (Ganache account view, gas paid)
+![](Evaluation_Evidence/Step4.1.c_DeployKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
-7. Check for any errors and debug as needed.
+<hr style="border:2px solid blue">
 
-8. Take a screenshot of the successful compilation of the contract, and add it to the Evaluation Evidence section of the `README.md` file for your Challenge repository.
+### Deploy the KaseiCoinCrowdsaleDeployer Contract (Ganache transaction view)
+![](Evaluation_Evidence/Step4.1.d_DeployKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
-#### Create the KaseiCoin Crowdsale Contract
+<hr style="border:2px solid blue">
 
-In this section, you will define the KaseiCoin crowdsale contract. To do so, complete the following steps:
+### Deploy the KaseiCoinCrowdsaleDeployer Contract (Metamask deploy view)
+![](Evaluation_Evidence/Step4.1.e_DeployKaseiCoinCrowdsaleDeployerContract.JPG)<br/>
 
-1. Import the provided `KaseiCoinCrowdsale.sol` starter code into the Remix IDE.
+<hr style="border:2px solid blue">
 
-2. Have this contract inherit the following OpenZeppelin contracts:
+### Setup KaseiCoin Crowdsale Contract Address (Remix view)
+![](Evaluation_Evidence/Step4.2.a_SetupRemixKaseiCoinCrowdsaleContractAddress.JPG)<br/>
 
-* `Crowdsale`
+<hr style="border:2px solid blue">
 
-* `MintedCrowdsale`
+### Setup KaseiCoin Crowdsale Contract Details (Remix view)
+![](Evaluation_Evidence/Step4.2.b_SetupRemixKaseiCoinCrowdsaleContractDetail.JPG)<br/>
 
-3. Within the `KaisenCoinCrowdsale` constructor, provide parameters for all of the features of your crowdsale, such as `rate`, `wallet` (where the funds that the token raises should be deposited), and `token`. Configure these parameters as you see fit for your KaseiCoin token.
+<hr style="border:2px solid blue">
 
-4. Compile the contract using compiler version 0.5.0.
+### Setup KaseiCoin Contract Address (Remix view)
+![](Evaluation_Evidence/Step4.2.c_SetupRemixKaseiCoinContractAddress.JPG)<br/>
 
-5. Check for any errors and debug as needed.
+<hr style="border:2px solid blue">
 
-6. Take a screenshot of the successful compilation of the contract, and add it to the Evaluation Evidence section of the `README.md` file for your Challenge repository.
+### Setup KaseiCoin Contract Details (Remix view)
+![](Evaluation_Evidence/Step4.2.d_SetupRemixKaseiCoinContractDetail.JPG)<br/>
 
-#### Create the KaseiCoin Deployer Contract
+<hr style="border:2px solid blue">
 
+### MetaMask Account3, Buy 1 KAI Token (Remix, setup buy)
+![](Evaluation_Evidence/Step4.2.e.1_Acct3Buy1KaiSetup.JPG)<br/>
 
-In this section, you will create the KaseiCoin deployer contract. Start by uncommenting the `KaseiCoinCrowdsaleDeployer` contract in the provided `KaseiCoinCrowdsale.sol` starter code.
+<hr style="border:2px solid blue">
 
-Next, within the `KaseiCoinCrowdsaleDeployer` contract, add variables to store the addresses of the `KaseiCoin` and `KaseiCoinCrowdsale` contracts, which this contract will deploy. To do so, complete the following steps:
+### MetaMask Account3, Buy 1 KAI Token (Remix, KaseiCoinCrowdsale Contract Details before buy)
+![](Evaluation_Evidence/Step4.2.e.2_Acct3Buy1KaiSetup.JPG)<br/>
 
-1. Create an `address public` variable called `kasei_token_address`, which will store `KaseiCoin`’s address once that contract has been deployed.
+<hr style="border:2px solid blue">
 
-2. Create an `address public` variable called `kasei_crowdsale_address`, which will store `KaseiCoinCrowdsale`'s address once that contract has been deployed.
+### MetaMask Account3, Buy 1 KAI Token (Remix, KaseiCoinCrowdsale Contract Details after buy)
+![](Evaluation_Evidence/Step4.2.f.1_Acct3Buy1KaiResult.JPG)<br/>
 
-3. Add the following parameters to the constructor for the `KaseiCoinCrowdsaleDeployer` contract: `name`, `symbol`, and `wallet`.
+<hr style="border:2px solid blue">
 
-4. Inside of the constructor body (between the curly braces), complete the following steps:
+### MetaMask Account3, Buy 1 KAI Token (Ganache view, accounts, -1 Ether for buyer, +1 Ether for wallet address)
+![](Evaluation_Evidence/Step4.2.f.2_Acct3Buy1KaiResult.JPG)<br/>
 
-    * Create a new instance of the `KaseiCoinToken` contract.
+<hr style="border:2px solid blue">
 
-    * Assign the KaseiCoin token contract’s address to the `kasei_token_address` variable. This will allow you to easily fetch the token's address later.
+### MetaMask Account3, Buy 1 KAI Token (Ganache view, transactions)
+![](Evaluation_Evidence/Step4.2.f.3_Acct3Buy1KaiResult.JPG)<br/>
 
-    * Create a new instance of the `KaseiCoinCrowdsale` contract using the following parameters:
+<hr style="border:2px solid blue">
 
-       * `rate` (Set `rate` equal to 1 in order to maintain parity with ether.)
+### MetaMask Account3, Buy 1 KAI Token (MetaMask view, -1 Ether for buyer)
+![](Evaluation_Evidence/Step4.2.f.4_Acct3Buy1KaiResult.JPG)<br/>
 
-       * `wallet` (Pass `wallet` in from the main constructor. This is the wallet that will get paid all of the ether raised by the crowdsale contract.)
+<hr style="border:2px solid blue">
 
-       * `token` (This should be the `token` variable where `KaseiCoin` is stored.)
+### MetaMask Account3, Buy 1 KAI Token (MetaMask view, +1 Ether for wallet address)
+![](Evaluation_Evidence/Step4.2.f.5_Acct3Buy1KaiResult.JPG)<br/>
 
-    * Assign the KaseiCoin crowdsale contract’s address to the `kasei_crowdsale_address` variable. This will allow you to easily fetch the crowdsale’s address later.
+<hr style="border:2px solid blue">
 
-    * Set the `KaseiCoinCrowdsale` contract as a minter.
+### MetaMask Account3, Buy 1 KAI Token (MetaMask view, Import Tokens Config)
+![](Evaluation_Evidence/Step4.2.f.6_Acct3Buy1KaiResult.JPG)<br/>
 
-    * Have the `KaseiCoinCrowdsaleDeployer` renounce its minter role.
+<hr style="border:2px solid blue">
 
-5. Compile the contract using compiler version 0.5.0.
+### MetaMask Account3, Buy 1 KAI Token (MetaMask view, Import Tokens Confirm)
+![](Evaluation_Evidence/Step4.2.f.7_Acct3Buy1KaiResult.JPG)<br/>
 
-6. Check for any errors and debug as needed.
+<hr style="border:2px solid blue">
 
-7. Take a screenshot of the successful compilation of the contract, and add it to the Evaluation Evidence section of the `README.md` file for your Challenge repository.
+### MetaMask Account3, Buy 1 KAI Token (Remix view, show KaseiToken Contract, totalSupply = 1 KAI)
+![](Evaluation_Evidence/Step4.2.f.8_Acct3Buy1KaiResult.JPG)<br/>
 
-#### Deploy the Crowdsale to a Local Blockchain
+<hr style="border:2px solid blue">
 
-In this section, you will deploy the crowdsale to a local blockchain using Remix, MetaMask, and Ganache. To do so, complete the following steps. Record a short video or take screenshots that illustrate the three steps outlined below as evidence of your deployed crowdsale contract.
+### MetaMask Account4, Buy 2 KAI Token (Remix, setup buy)
+![](Evaluation_Evidence/Step4.2.g.1_Acct4Buy2KaiSetup.JPG)<br/>
 
+<hr style="border:2px solid blue">
 
-1. Deploy the crowdsale to a local blockchain with Remix, MetaMask, and Ganache.
+### MetaMask Account4, Buy 2 KAI Token (Remix, KaseiCoinCrowdsale Contract Details before buy)
+![](Evaluation_Evidence/Step4.2.g.2_Acct4Buy2KaiSetup.JPG)<br/>
 
-2. Test the functionality of the crowdsale by using test accounts to buy new tokens and then checking the balances associated with those accounts.
+<hr style="border:2px solid blue">
 
-3. After purchasing tokens with one or more test accounts, view the total supply of minted tokens and the amount of wei that has been raised in the crowdsale contract.
+### MetaMask Account4, Buy 2 KAI Token (Remix, KaseiCoinCrowdsale Contract Details after buy)
+![](Evaluation_Evidence/Step4.2.h.1_Acct4Buy2KaiResult.JPG)<br/>
 
-#### Optional: Extend the Crowdsale Contract by Using OpenZeppelin
+<hr style="border:2px solid blue">
 
-In this **optional** section, you may extend the crowdsale contract to enhance its functionality. To do so, you will use the following OpenZeppelin contracts:
+### MetaMask Account4, Buy 2 KAI Token (Ganache view, accounts, -2 Ether for buyer, +2 Ether for wallet address)
+![](Evaluation_Evidence/Step4.2.h.2_Acct4Buy2KaiResult.JPG)<br/>
 
-* `CappedCrowdsale`: This contract allows you to cap the total amount of ether that may be raised during your crowdsale.
+<hr style="border:2px solid blue">
 
-* `TimedCrowdsale`: This contract allows you to set a time limit for your crowdsale by adding an opening time and a closing time.
+### MetaMask Account4, Buy 2 KAI Token (Ganache view, transactions)
+![](Evaluation_Evidence/Step4.2.h.3_Acct4Buy2KaiResult.JPG)<br/>
 
-* `RefundablePostDeliveryCrowdsale`: Every time you launch a crowdsale, you set a goal amount of ether to raise. If the goal is not reached, it is common practice to refund your investors. This contract adds this capability to a crowdsale.
+<hr style="border:2px solid blue">
 
-> **Hint** We encourage you to read more about these contracts on the [Crowdsales page](https://docs.openzeppelin.com/contracts/2.x/crowdsales) of the OpenZeppelin documentation.
+### MetaMask Account4, Buy 2 KAI Token (MetaMask view, -2 Ether for buyer)
+![](Evaluation_Evidence/Step4.2.h.4_Acct4Buy2KaiResult.JPG)<br/>
 
-To enhance your KaseiCoin crowdsale with this added functionality, complete the following steps:
+<hr style="border:2px solid blue">
 
-1. Import the three OpenZeppelin contracts described above into the `KaseiCoinCrowdsale.sol` contract by using the following code:
+### MetaMask Account4, Buy 2 KAI Token (MetaMask view, +2 Ether for wallet address)
+![](Evaluation_Evidence/Step4.2.h.5_Acct4Buy2KaiResult.JPG)<br/>
 
-    ```solidity
-    import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/CappedCrowdsale.sol";
-    import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/validation/TimedCrowdsale.sol";
-    import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/distribution/RefundablePostDeliveryCrowdsale.sol";
-    ```
+<hr style="border:2px solid blue">
 
-2. In addition to the `Crowdsale` and `MintedCrowdsale` contracts, which your contract previously inherited from OpenZeppelin, have your `KaseiCoinCrowdsale` contract inherit the three contracts that you imported in the previous step:
+### MetaMask Account4, Buy 2 KAI Token (MetaMask view, Import Tokens Config)
+![](Evaluation_Evidence/Step4.2.h.6_Acct4Buy2KaiResult.JPG)<br/>
 
-* `CappedCrowdsale`
+<hr style="border:2px solid blue">
 
-* `TimedCrowdsale`
+### MetaMask Account4, Buy 2 KAI Token (MetaMask view, Import Tokens Confirm)
+![](Evaluation_Evidence/Step4.2.h.7_Acct4Buy2KaiResult.JPG)<br/>
 
-* `RefundablePostDeliveryCrowdsale`
+<hr style="border:2px solid blue">
 
-3. In the `KaseiCoinCrowdsale` constructor, add the following new parameters:
+### MetaMask Account4, Buy 2 KAI Token (Remix view, show KaseiToken Contract, totalSupply = 3 KAI)
+![](Evaluation_Evidence/Step4.2.h.8_Acct4Buy2KaiResult.JPG)<br/>
 
-    * `uint goal`: This variable will represent the amount of ether which you hope to raise during the crowdsale&mdash;the crowdsale’s goal.
+<hr style="border:2px solid blue">
 
-    * `uint open`: This variable will represent the opening time for the crowdsale.
+### OPTIONAL: Deploy the KaseiCoinCrowdsaleDeployer Contract (Remix deploy view)
+![](Evaluation_Evidence/Step5.1_SetupRemixDeployKaiseCoinCrowsdaleDeployerContract.JPG)<br/>
 
-    * `uint close`: This variable will represent the closing time for the crowdsale.
+<hr style="border:2px solid blue">
 
-4. Complete the `KaseiCoinCrowdsale` constructor code by adding calls to the new contracts, as the following code shows:
+### OPTIONAL: Deploy the KaseiCoinCrowdsaleDeployer Contract (Remix contract details view)
+![](Evaluation_Evidence/Step5.2_DetailsRemixDeployKaiseCoinCrowsdaleDeployerContract.JPG)<br/>
 
-    ```solidity
-    constructor(
-            uint256 rate, // rate in TKNbits
-            address payable wallet, // sale beneficiary
-            KaseiCoin token, // the KaseiCoin itself that the KaseiCoinCrowdsale will work with
-            uint goal, // the crowdsale goal
-            uint open, // the crowdsale opening time
-            uint close // the crowdsale closing time
-        ) public
-            Crowdsale(rate, wallet, token)
-            CappedCrowdsale(goal)
-            TimedCrowdsale(open, close)
-            RefundableCrowdsale(goal)
-        {
-            // constructor can stay empty
-        }
-    ```
+<hr style="border:2px solid blue">
 
-    > **Important** `RefundablePostDeliveryCrowdsale` itself inherits the `RefundableCrowdsale` contract, which requires a `goal` parameter. So, in addition to the others, you must call the `RefundableCrowdsale` constructor from your `KaseiCoinCrowdsale` constructor. `RefundablePostDeliveryCrowdsale` does not have its own constructor, which is why we use the `RefundableCrowdsale` constructor that it inherits.
-    >
-    > If you forget to call the `RefundableCrowdsale` constructor, the `RefundablePostDeliveryCrowdsale` will fail. This is because it does not have its own constructor, and so it relies on the `RefundableCrowdsale` constructor.
+### OPTIONAL: KaseiCoinCrowdsale Contract Details
+![](Evaluation_Evidence/Step5.3.a_DetailsRemixKaiseCoinCrowsdaleContract.JPG)<br/>
 
-5. Next, update the `KaseiCoinCrowdsaleDeployer` contract to allow the deployment of the updated crowdsale contract. In the constructor of the deployer contract, add a new `uint` parameter called `goal` that will allow you to set the crowdsale goal.
+<hr style="border:2px solid blue">
 
-6. In the core assignment, you added an instance of the `KaseiCoinCrowdsale` contract to the KaseiCoin deployer contract. Since we have modified the `KaseiCoinCrowdsale` contract to support new functionality, you must now update your previous code with the following code:
+### OPTIONAL: KaseiCoinContract Details
+![](Evaluation_Evidence/Step5.3.b_DetailsRemixKaiseCoinContract.JPG)<br/>
 
-    ```solidity
-    KaseiCoinCrowdsale kasei_crowdsale = new KaseiCoinCrowdsale (1, wallet, token, goal, now, now + 24 weeks);
-    ```
+<hr style="border:2px solid blue">
 
-   Note that in the preceding code, you added values for the three new parameters. The `goal` parameter represents the amount of ether to raise during the crowdsale, `now` represents the crowdsale opening time, and `now + 24 weeks` represents the closing time.
+### OPTIONAL: Acct3 Buy 7 KAI Tokens (Token TotalSupply = 7 KAI)
+![](Evaluation_Evidence/Step5.4.1_Buy7KaiTokensAcct3.JPG)<br/>
 
-    The `now` function returns the current Ethereum block timestamp in the form of seconds since the Unix epoch. The **Unix epoch** (also known as **Unix time**, **POSIX time**, or **Unix timestamp**) is an integer that represents the number of seconds that have elapsed since January 1, 1970 (midnight UTC/GMT), not counting leap seconds.
+<hr style="border:2px solid blue">
 
-7. Compile and test the updated contract by completing following steps:
+### OPTIONAL: Acct3 Buy 7 KAI Tokens (Ganache view)
+![](Evaluation_Evidence/Step5.4.2_Buy7KaiTokensAcct3.JPG)<br/>
 
-    * Send ether to the crowdsale from a different account (**not** the same account that is raising funds). Then, once you confirm that the crowdsale works as expected, try to add the token to your wallet and test a transaction.
+<hr style="border:2px solid blue">
 
-    * You can set the `close` time to be `now + 5 minutes`, or any timeline that you'd like to test, for a shorter crowdsale.
+### OPTIONAL: Acct3 Buy 7 KAI Tokens (MetaMask View)
+![](Evaluation_Evidence/Step5.4.3_Buy7KaiTokensAcct3.JPG)<br/>
 
-    * When sending ether to the contract, make sure that you meet the contract’s `goal`. Then, finalize the sale using the `Crowdsale` contract's `finalize` function. To finalize the sale, `isOpen` must return false (`isOpen` comes from `TimedCrowdsale` and checks to see whether the `close` time has passed yet). If you set the `goal` to 300 ether, for example, you may need to purchase tokens from multiple accounts in order to meet the goal. If you run out of pre-funded accounts in Ganache, you can create a new workspace.
+<hr style="border:2px solid blue">
 
-    * View your tokens in MetaMask. In MetaMask, click Add Token, then click Custom Token,  and enter the token contract’s address. Make sure to purchase higher amounts of tokens in order to see the denomination appear in your wallet as more than a few wei worth.
+### OPTIONAL: Acct3 Buy 7 KAI Tokens (KaseiCoinCrowdsale Contract Status)
+![](Evaluation_Evidence/Step5.4.4_Buy7KaiTokensAcct3.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct4 Buy 3 KAI Tokens (Token TotalSupply = 7 KAI)
+![](Evaluation_Evidence/Step5.5.1_Buy3KaiTokensAcct4.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct4 Buy 3 KAI Tokens (Ganache view)
+![](Evaluation_Evidence/Step5.5.2_Buy3KaiTokensAcct4.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct4 Buy 3 KAI Tokens (MetaMask View)
+![](Evaluation_Evidence/Step5.5.3_Buy3KaiTokensAcct4.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct5 Buy 1 KAI Token After Crowdsale Time Elapsed - Error (Remix Error)
+![](Evaluation_Evidence/Step5.6.1_Buy1KaiTokensAcct5AfterTimeElapsedErrorMsg.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct5 Buy 1 KAI Token After Crowdsale Time Elapsed - Error (MetaMask Error)
+![](Evaluation_Evidence/Step5.6.2_Buy1KaiTokensAcct5AfterTimeElapsedErrorMsg.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Acct5 Buy 1 KAI Token After Crowdsale Time Elapsed - Error (Ganache, Confirm did not go through)
+![](Evaluation_Evidence/Step5.6.3_Buy1KaiTokensAcct5AfterTimeElapsedErrorMsg.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Ganache view Before FINALIZE Crowsdsale (No Ether applied to Wallet)
+![](Evaluation_Evidence/Step5.7.1_BeforeFinalizeAndReachedGoal.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Ganache view After FINALIZE Crowsdsale (All 10 Ether applied to Wallet)
+![](Evaluation_Evidence/Step5.7.2_AfterFinalizeAndReachedGoal.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Final State Of KaseiCoinCrowdsale Contract
+![](Evaluation_Evidence/Step5.7.3_FinalStateOfCrowdsaleContract.JPG)<br/>
+
+<hr style="border:2px solid blue">
+
+### OPTIONAL: Final State Of KaseiCoin Contract
+![](Evaluation_Evidence/Step5.7.4_FinalStateOfKaiserCoinContract.JPG)<br/>
+
+<hr style="border:2px solid blue">
